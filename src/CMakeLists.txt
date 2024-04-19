@@ -232,14 +232,14 @@ install(FILES
  DESTINATION include/soplex/external/fmt)
 
 # install the binary and the library to appropriate lcoations and add them to an export group
-install(TARGETS soplex libsoplex libsoplex-pic libsoplexshared EXPORT soplex-targets
+install(TARGETS soplex libsoplex libsoplex-pic EXPORT soplex-targets
 	LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 	INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 # Add library targets to the build-tree export set
-export(TARGETS libsoplex libsoplex-pic libsoplexshared
+export(TARGETS libsoplex libsoplex-pic
   FILE "${CMAKE_BINARY_DIR}/soplex-targets.cmake")
 
 #configure the config file for the build tree
